@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: yes
+  roles:
+    - { role: nx-upgrade, nexus_home: /opt/local, nexus_type: oss, nexus_old_version: 2.11.1-01, nexus_version: 2.13.0-01, tags: ["oss"] }
+    - { role: nx-upgrade, nexus_home: /opt/local, nexus_type: professional-bundle, nexus_old_version: professional-2.11.1-01, nexus_version: professional-2.13.0-01, tags: ["pro"] }
+
+# ansible-playbook nexus-upgrade.yml
+
